@@ -1,0 +1,25 @@
+body{
+    background-color: pink;
+    text-align: center;
+    color: aliceblue;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+a{
+    color: darkblue;
+    text-decoration: none;
+}
+
+a:hover{
+    color: black;
+}
+
+main{
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+h2{
+    text-align: center;
+}
