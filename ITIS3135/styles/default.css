@@ -1,7 +1,7 @@
 body{
     background-color: pink;
     text-align: center;
-    color: aliceblue;
+    color: darkblue;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
@@ -15,11 +15,20 @@ a:hover{
 }
 
 main{
-    text-align: center;
+    text-align: left;
     margin-left: 20%;
     margin-right: 20%;
 }
 
 h2{
     text-align: center;
+}
+
+img{
+    width: 10%;
+    height: 10%;
+}
+figure{
+    text-align: center;
+    font-style: italic;
 }
