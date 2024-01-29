@@ -1,0 +1,71 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Add the following styles for table and alternating row colors */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: rgb(121, 155, 207); /* Updated color */
+    color: white;
+}
+
+/* Use pseudo-classes to alternate row colors */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Additional styling for better accessibility */
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Style the top row differently */
+tr:first-child {
+    background-color: rgb(121, 155, 207); /* Updated color */
+    color: white;
+}
+
+/* Style the last row differently */
+tr:last-child {
+    background-color: #ddd;
+}
+
+/* Style and center the footer */
+footer {
+    text-align: center;
+    background-color: rgb(121, 155, 207); /* Updated color */
+    color: white;
+    padding: 10px;
+}
+
+footer nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer
