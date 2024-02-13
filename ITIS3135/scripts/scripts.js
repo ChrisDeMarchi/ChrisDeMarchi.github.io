@@ -11,7 +11,6 @@ function displayDateTime() {
     hours = hours % 12;
     hours = hours ? hours : 12;
     const time = hours + ':' + minutes + ' ' + ampm;
-    
     document.getElementById('dateTime').innerText = `It is currently ${time} on ${dayOfWeek}, ${date} ${month}, ${year}`;
   }
   

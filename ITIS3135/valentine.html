@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentine's Day Surprise</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f7f7f7;
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        color: #e91e63;
+    }
+    button {
+        background-color: #e91e63;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin-top: 20px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    button:hover {
+        background-color: #c2185b;
+    }
+    #lyric {
+        margin-top: 50px;
+        font-style: italic;
+    }
+    .image {
+        max-width: 100%;
+        width: 300px; /* Set a fixed width for the images */
+        margin-top: 50px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    footer {
+        background-color: #e91e63;
+        color: white;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+</style>
+</head>
+<body>
+<audio src="images/Televised.mp3" autoplay loop></audio>
+<h1>Happy Valentine's Day!</h1>
+<button id="lyricBtn">Song lyrics that remind me of you <3</button>
+<div id="lyric"></div>
+<button id="imageBtn">Images I thought you'd like :)</button>
+<div id="imageContainer"></div>
+<footer>
+    Happy Valentine's Day Bella! I'm so happy that I get to call you mine. I can't express the amount you have done for me through words, and I can't comprehend loving someone as much as I love you ♥
+</footer>
+<script>
+    const lyricBtn = document.getElementById('lyricBtn');
+    const imageBtn = document.getElementById('imageBtn');
+    const lyricDiv = document.getElementById('lyric');
+    const imageContainer = document.getElementById('imageContainer');
+
+    const songLyrics = [
+        "I'm not a fortress anymore, I'm yours",
+        "I say I'm nothing but a bag of bones, you say that's the most expensive bag you own",
+        "I just need a quiet place where i can scream how i love you",
+        "I will always love you",
+        "She's my umbrella when the rainstorms hit",
+        "Out of all the things that I regret; Honey, you are not one of them",
+        "I'm all, I'm really all in; I fell in love with all your flaws and sins; Your scars are really gorgeous; I see your light in all the darkness",
+        "Two steps forward, one step back; It won't be long 'fore my heart's attached; And common sense falls second place; To the way it feels when you kiss my face",
+        "Oh, girl, it's you that I lie with; As the atom bomb locks in",
+        "Oh, she's so bright, I can't believe my eyes",
+        "Cause I love you, I miss you (When my mind is uncertain, my body decides); I wanna hug and kiss you (What it will do to get through the hell of life); Oh, I love you, I miss you (As I trip on the ocean that leads through your eyes); I wanna hug and kiss you, it´s alright"
+    ];
+
+    const images = [
+        "images/IMG_0829.jpg",
+        "images/4605.JPEG",
+        "images/5556.JPEG",
+        "images/5591.JPEG",
+        "images/5618.JPEG",
+        "images/5619.JPEG",
+        "images/5622.JPEG",
+        "images/B727C9EB-524A-4B41-9FC7-E2DE5AD3151A.jpg",
+        "images/D3CAA69F-0050-45E4-A93D-BFDAA6869288.jpg",
+        "images/IMG_2259.jpg",
+        "images/IMG_2511.jpg",
+        "images/IMG_2512.jpg",
+        "images/IMG_2514.jpg",
+        "images/IMG_2515.jpg",
+        "images/IMG_2828.jpg",
+        "images/IMG_6070.jpg",
+        "images/lp_image.jpg",
+        
+    ];
+
+    let currentLyricIndex = 0;
+    let currentImageIndex = 0;
+
+    lyricBtn.addEventListener('click', () => {
+        lyricDiv.textContent = songLyrics[currentLyricIndex];
+        currentLyricIndex = (currentLyricIndex + 1) % songLyrics.length;
+    });
+
+    imageBtn.addEventListener('click', () => {
+        imageContainer.innerHTML = `<img class="image" src="${images[currentImageIndex]}" alt="Image ${currentImageIndex + 1}">`;
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+    });
+</script>
+</body>
+</html>
