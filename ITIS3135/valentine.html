@@ -49,7 +49,8 @@
 </style>
 </head>
 <body>
-<audio src="images/Televised.mp3" autoplay loop></audio>
+<audio id="backgroundAudio" src="images/Televised.mp3" loop></audio>
+<button id="playBtn">Play Song</button>
 <h1>Happy Valentine's Day!</h1>
 <button id="lyricBtn">Song lyrics that remind me of you <3</button>
 <div id="lyric"></div>
@@ -63,6 +64,8 @@
     const imageBtn = document.getElementById('imageBtn');
     const lyricDiv = document.getElementById('lyric');
     const imageContainer = document.getElementById('imageContainer');
+    const playBtn = document.getElementById('playBtn');
+    const backgroundAudio = document.getElementById('backgroundAudio');
 
     const songLyrics = [
         "I'm not a fortress anymore, I'm yours",
@@ -101,6 +104,11 @@
 
     let currentLyricIndex = 0;
     let currentImageIndex = 0;
+
+    playBtn.addEventListener('click', () => {
+        backgroundAudio.play();
+        playBtn.disabled = true;
+    });
 
     lyricBtn.addEventListener('click', () => {
         lyricDiv.textContent = songLyrics[currentLyricIndex];
