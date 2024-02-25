@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Evaluations</title>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2>Website Evaluations</h2>
+        <section>
+            <h3><a href="https://octopus.com/" target="_blank">Octopus</a></h3>
+            <p>Octopus Deploy is used to deploy software quickly without worrying about issues. They work with many big names such as StackOverflow, Ubisoft, and Recruit Wizard. </p>
+            <ul>
+                <li><strong>Contrast:</strong>The color scheme of the website is easy on the eyes and fits well with the animations.  </li>
+                <li><strong>Repetition:</strong> The design is clearly established and followed throughout. The lists and organizations don't feel out of place and improve the site.</li>
+                <li><strong>Alignment:</strong> The alignment of the page is clear and concise. When scrolling down the page each element is visually connected.</li>
+                <li><strong>Proximity:</strong> The site's proximity is done well. Each piece of information is nested around other pieces of information that relate to one another and makes sense.</li>
+            </ul>
+        </section>
+        <section>
+            <h3><a href="https://news.ycombinator.com/" target="_blank">Hacker News</a></h3>
+            <p>Hacker News is a website designed around posting new updates within the hacking community.</p>
+            <ul>
+                <li><strong>Contrast:</strong> The contrast is awful and hard to look at. Bright colors that seem to be thrown together.</li>
+                <li><strong>Repetition:</strong> There is repitition in the site due to the fact that their isnt much of anything here. It's simply a list of posts.</li>
+                <li><strong>Alignment:</strong> The alignment is centered to make the posts easy to scroll through, however the left alignment leaves lots of space to the right of the page.</li>
+                <li><strong>Proximity:</strong> There is almost no proximity within the site. None of the posts are related to one another and are stacked by how recently they were added.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+             document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+     </script>
+     <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
