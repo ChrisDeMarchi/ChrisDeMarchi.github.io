@@ -1,22 +1,28 @@
-
 function displayFormData(formData) {
     var main = document.querySelector("main");
     main.innerHTML = "";
-    
+
     for (var pair of formData.entries()) {
         if (pair[0] === "image") {
             var img = document.createElement("img");
             img.src = URL.createObjectURL(pair[1]);
-            img.style.maxWidth = "100%"; // Set maximum width for the image
+            img.style.width = "300px"; // Set width of the image
             img.style.display = "block"; // Display the image as a block element
+            img.style.margin = "auto"; // Center the image
             img.style.marginBottom = "20px"; // Add some bottom margin for spacing
             main.appendChild(img);
-        } else {
-            var p = document.createElement("p");
-            p.textContent = pair[0] + ": " + pair[1];
-            main.appendChild(p);
         }
     }
+
+    var ul = document.createElement("ul");
+    for (var pair of formData.entries()) {
+        if (pair[0] !== "image") {
+            var li = document.createElement("li");
+            li.textContent = pair[0] + ": " + pair[1];
+            ul.appendChild(li);
+        }
+    }
+    main.appendChild(ul);
 
     var resetLink = document.createElement("a");
     resetLink.href = "#";
@@ -28,6 +34,7 @@ function displayFormData(formData) {
     main.appendChild(document.createElement("br"));
     main.appendChild(resetLink);
 }
+
 
 
 
