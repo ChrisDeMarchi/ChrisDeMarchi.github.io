@@ -1,17 +1,10 @@
 // Function to display form data
 function displayFormData(formData) {
-    var introContent = document.createElement("div");
+    var introContent = document.createElement("ul");
     for (var pair of formData.entries()) {
-        var p = document.createElement("p");
-        p.textContent = pair[0] + ": " + pair[1];
-        if (pair[0] === "image") {
-            var img = document.createElement("img");
-            img.src = URL.createObjectURL(pair[1]);
-            img.style.maxWidth = "300px"; // Set maximum width for the image
-            introContent.appendChild(img);
-        } else {
-            introContent.appendChild(p);
-        }
+        var li = document.createElement("li");
+        li.textContent = pair[0] + ": " + pair[1];
+        introContent.appendChild(li);
     }
     var main = document.querySelector("main");
     main.innerHTML = "";
@@ -20,9 +13,7 @@ function displayFormData(formData) {
     resetLink.href = "#";
     resetLink.textContent = "Reset";
     resetLink.onclick = function () {
-        main.innerHTML = "";
-        main.appendChild(document.getElementById("introForm"));
-        document.getElementById("introForm").reset();
+        location.reload();
         return false;
     };
     main.appendChild(document.createElement("br"));
@@ -49,14 +40,6 @@ document.getElementById("introForm").addEventListener("submit", function(event) 
     } else {
         displayFormData(new FormData(this));
     }
-});
-
-// Reset the form
-document.getElementById("resetBtn").addEventListener("click", function(event) {
-    var main = document.querySelector("main");
-    main.innerHTML = "";
-    main.appendChild(document.getElementById("introForm"));
-    document.getElementById("introForm").reset();
 });
 
 // Add new course text boxes
