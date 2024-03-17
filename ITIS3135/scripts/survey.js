@@ -48,7 +48,14 @@ document.getElementById("introForm").addEventListener("submit", function(event) 
     for (var pair of formData.entries()) {
         var p = document.createElement("p");
         p.textContent = pair[0] + ": " + pair[1];
-        introContent.appendChild(p);
+        if (pair[0] === "image") {
+            var img = document.createElement("img");
+            img.src = URL.createObjectURL(pair[1]);
+            img.style.maxWidth = "300px"; // Set maximum width for the image
+            introContent.appendChild(img);
+        } else {
+            introContent.appendChild(p);
+        }
     }
     var main = document.querySelector("main");
     main.innerHTML = "";
