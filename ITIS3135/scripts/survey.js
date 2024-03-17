@@ -53,7 +53,10 @@ document.getElementById("introForm").addEventListener("submit", function(event) 
 
 // Reset the form
 document.getElementById("resetBtn").addEventListener("click", function(event) {
-    location.reload();
+    var main = document.querySelector("main");
+    main.innerHTML = "";
+    main.appendChild(document.getElementById("introForm"));
+    document.getElementById("introForm").reset();
 });
 
 // Add new course text boxes
