@@ -31,6 +31,7 @@ function displayFormData(formData) {
 
 // Prevent form submission without necessary information
 document.getElementById("introForm").addEventListener("submit", function(event) {
+    event.preventDefault();
     var name = document.getElementById("name").value;
     var mascot = document.getElementById("mascot").value;
     var image = document.getElementById("image").files[0];
@@ -44,7 +45,6 @@ document.getElementById("introForm").addEventListener("submit", function(event) 
     var agree = document.getElementById("agree").checked;
 
     if (name === "" || mascot === "" || image === undefined || imageCaption === "" || personalBackground === "" || professionalBackground === "" || academicBackground === "" || webDevBackground === "" || primaryComputer === "" || courses.length === 0 || !agree) {
-        event.preventDefault();
         alert("Please fill out all fields and agree to the terms.");
     } else {
         displayFormData(new FormData(this));
@@ -58,3 +58,21 @@ document.getElementById("resetBtn").addEventListener("click", function(event) {
     main.appendChild(document.getElementById("introForm"));
     document.getElementById("introForm").reset();
 });
+
+// Add new course text boxes
+function addCourse() {
+    var courseList = document.getElementById("courseList");
+    var input = document.createElement("input");
+    input.type = "text";
+    input.name = "course[]";
+    input.required = true;
+    courseList.appendChild(input);
+    var button = document.createElement("button");
+    button.type = "button";
+    button.textContent = "Delete";
+    button.onclick = function () {
+        courseList.removeChild(input);
+        courseList.removeChild(button);
+    };
+    courseList.appendChild(button);
+}
