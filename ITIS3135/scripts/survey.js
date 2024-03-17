@@ -1,9 +1,15 @@
-// Function to display form data
 function displayFormData(formData) {
     var introContent = document.createElement("ul");
     for (var pair of formData.entries()) {
         var li = document.createElement("li");
-        li.textContent = pair[0] + ": " + pair[1];
+        if (pair[0] === "image") {
+            var img = document.createElement("img");
+            img.src = URL.createObjectURL(pair[1]);
+            img.style.maxWidth = "300px"; // Set maximum width for the image
+            li.appendChild(img);
+        } else {
+            li.textContent = pair[0] + ": " + pair[1];
+        }
         introContent.appendChild(li);
     }
     var main = document.querySelector("main");
@@ -20,7 +26,7 @@ function displayFormData(formData) {
     main.appendChild(resetLink);
 }
 
-// Prevent form submission without necessary information
+
 document.getElementById("introForm").addEventListener("submit", function(event) {
     event.preventDefault();
     var name = document.getElementById("name").value;
@@ -42,7 +48,6 @@ document.getElementById("introForm").addEventListener("submit", function(event) 
     }
 });
 
-// Add new course text boxes
 function addCourse() {
     var courseList = document.getElementById("courseList");
     var input = document.createElement("input");
