@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chris DeMarchi's Colorful Dandan || Arrays </title>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2>Arrays</h2>
+        <div>
+            <label for="nameInput">Name:</label>
+            <input type="text" id="nameInput">
+            <label for="salaryInput">Salary:</label>
+            <input type="text" id="salaryInput">
+            <button id="addSalaryButton">Add Salary</button>
+        </div>
+        <div>
+            <select id="personSelect">
+                <option value="" disabled selected>Select a person</option>
+            </select>
+            <label for="newSalaryInput">New Salary:</label>
+            <input type="text" id="newSalaryInput">
+            <button id="modifySalaryButton">Modify Salary</button>
+        </div>
+        <button id="displayResultsButton">Display Results</button>
+        <button id="displaySalaryButton">Display Salary</button>
+        <div id="results"></div>
+        <table id="results_table"></table>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/arrays.js"></script>
+</body>
+</html>
