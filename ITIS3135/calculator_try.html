@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chris DeMarchi's Colorful Dandan || Calculator Try </title>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2>Calculator Try</h2>
+        <div class="calculator">
+            <div class="display" id="display">0</div>
+            <div class="buttons">
+                <button onclick="appendNum(7)">7</button>
+                <button onclick="appendNum(8)">8</button>
+                <button onclick="appendNum(9)">9</button>
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="appendNum(4)">4</button>
+                <button onclick="appendNum(5)">5</button>
+                <button onclick="appendNum(6)">6</button>
+                <button onclick="operate('+')">+</button>
+                <button onclick="appendNum(1)">1</button>
+                <button onclick="appendNum(2)">2</button>
+                <button onclick="appendNum(3)">3</button>
+                <button onclick="operate('-')">-</button>
+                <button onclick="appendNum(0)">0</button>
+                <button onclick="appendDecimal()">.</button>
+                <button onclick="calculate()">=</button>
+                <button onclick="operate('*')">*</button>
+                <button onclick="operate('/')">/</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/calculator_try.js"></script>
+</body>
+</html>
