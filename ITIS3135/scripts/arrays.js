@@ -22,10 +22,24 @@ function addSalary() {
     persons.push(name);
     salaries.push(parseFloat(salary));
 
+    updatePersonSelect();
     document.getElementById("nameInput").value = "";
     document.getElementById("salaryInput").value = "";
     document.getElementById("nameInput").focus();
 }
+
+function updatePersonSelect() {
+    let select = document.getElementById("personSelect");
+    select.innerHTML = ""; // Clear existing options
+
+    for (let i = 0; i < persons.length; i++) {
+        let option = document.createElement("option");
+        option.value = i;
+        option.text = persons[i];
+        select.appendChild(option);
+    }
+}
+
 
 function modifySalary() {
     let select = document.getElementById("personSelect");
