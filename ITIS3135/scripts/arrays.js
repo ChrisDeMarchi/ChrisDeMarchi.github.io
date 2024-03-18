@@ -30,7 +30,7 @@ function addSalary() {
 
 function updatePersonSelect() {
     let select = document.getElementById("personSelect");
-    select.innerHTML = ""; // Clear existing options
+    select.innerHTML = ""; 
 
     for (let i = 0; i < persons.length; i++) {
         let option = document.createElement("option");
@@ -49,14 +49,18 @@ function modifySalary() {
         return;
     }
 
-    let newSalary = prompt("Enter the new salary for " + persons[index] + ":");
+    let newSalaryInput = document.getElementById("newSalaryInput");
+    let newSalary = newSalaryInput.value.trim();
+
     if (!newSalary || isNaN(parseFloat(newSalary))) {
         alert("Invalid input. Please enter a valid numeric salary.");
         return;
     }
 
     salaries[index] = parseFloat(newSalary);
+    newSalaryInput.value = "";
 }
+
 
 function displayResults() {
     if (salaries.length === 0) {
