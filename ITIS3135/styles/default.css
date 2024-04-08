@@ -26,6 +26,11 @@ main{
     margin-right: 20%;
 }
 
+div {
+    border: 2px solid black; /* 2px thick solid black border */
+  }
+  
+
 h2{
     text-align: center;
 }
@@ -35,7 +40,7 @@ h3{
 }
 
 img {
-    width: 50%; 
+    width: 90%; 
     height: auto; 
     display: block; 
     margin: 20px auto; 
