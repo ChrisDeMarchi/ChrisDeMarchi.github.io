@@ -6,14 +6,29 @@ body{
 }
 
 main {
-    max-width: 1200px; /* Adjust as needed */
-    width: 90%; /* Adjust percentage based on design requirements */
-    margin: 0 auto; /* Centers the content horizontally */
+    max-width: 1200px; 
+    width: 90%; 
+    margin: 0 auto;
+    text-align: center; 
 }
+
+title {
+    text-align: center;
+}
+
 
 a{
     color: darkblue;
     text-decoration: none;
+    text-align: center;
+}
+
+form{
+margin-right: 30%;
+}
+
+iframe{
+margin-right: 30%;
 }
 
 a:hover{
@@ -22,21 +37,25 @@ a:hover{
 
 main{
     text-align: center;
-    margin-left: 20%;
+    margin-left: 28%;
     margin-right: 20%;
 }
 
 div {
-    border: 2px solid black; /* 2px thick solid black border */
+    border: 2px solid black; 
+    text-align: center;
+    width: 70%;
   }
   
 
 h2{
     text-align: center;
+    margin-right: 30%;
 }
 
 h3{
     text-align: center;
+    margin-right: 31%;
 }
 
 img {
@@ -44,39 +63,51 @@ img {
     height: auto; 
     display: block; 
     margin: 20px auto; 
+    text-align: center;
+}
+
+footer{
+    text-align: center;
 }
 
 ul {
     text-align: left;
     list-style-type: disc; 
     margin-left: 20px; 
+    text-align: center;
 }
 
 figure{
     text-align: center;
     font-style: italic;
+    
 }
 p{
     text-align: center;
+    margin-right: 30%;
 }
 
 table {
     margin: 0 auto; 
     border-collapse: collapse; 
     width: 100%; 
+    text-align: center;
 }
 
 th, td {
     border: 1px solid black; 
-    padding: 8px; 
+    padding: 8px;
+    text-align: center; 
 }
 
 th {
-    background-color: lightblue; 
+    background-color: lightblue;
+    text-align: center; 
 }
 
 caption {
     font-weight: bold; 
+    text-align: center;
 }
 
 .calculator {
@@ -85,6 +116,7 @@ caption {
     width: 300px;
     margin: 0 auto;
     padding: 10px;
+    text-align: center;
 }
 
 .display {
@@ -101,6 +133,7 @@ caption {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 5px;
+    text-align: center;
 }
 
 button {
@@ -110,16 +143,19 @@ button {
     background-color: #f9f9f9;
     cursor: pointer;
     transition: background-color 0.3s;
+    text-align: center;
 }
 
 button:hover {
     background-color: #e9e9e9;
+    text-align: center;
 }
 
 
 @media screen and (min-width: 981px) and (max-width: 1400px) {
     main {
         max-width: 90%; 
+        text-align: center;
     }
 }
 
@@ -127,12 +163,14 @@ button:hover {
 @media screen and (min-width: 601px) and (max-width: 980px) {
     main {
         max-width: 95%; 
+        text-align: center;
     }
 }
 
-/* Rule Overrides For Mobile Devices */
+
 @media screen and (min-width: 370px) and (max-width: 600px) {
     main {
         max-width: 100%; 
+        text-align: center;
     }
 }
